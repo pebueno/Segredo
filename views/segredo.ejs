@@ -1,0 +1,20 @@
+<%- include('partials/header') %>
+
+<div class="jumbotron text-center">
+  <div class="container">
+    <i class="fas fa-key fa-6x"></i>
+    <h1 class="display-3">Você Descobriu Meu Segredo!</h1>
+
+    <% usersComSegredo.forEach(function(user){ %>
+      <p class="secret-text"><%=user.segredo%></p>
+
+      <% }) %>
+
+    <hr>
+    
+    <a class="btn btn-light btn-lg" href="/sair" role="button">Sair</a>
+    <a class="btn btn-dark btn-lg" href="/enviar" role="button">Enviar um Segredo</a>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
